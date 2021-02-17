@@ -26,6 +26,8 @@ class CarsService{
     ProxyState.cars = temp
   }
 
+
+
   deleteCar(id) {
     let temp = ProxyState.cars
     let carIndex = temp.findIndex(car =>  car.id == id)
@@ -33,5 +35,6 @@ class CarsService{
     ProxyState.cars = temp
   }
 }
+
 
 export const carsService = new CarsService()

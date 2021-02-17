@@ -22,8 +22,22 @@ createHouse(event) {
     let form = event.target
     console.log(form)
     let rawHouse = {
-
+        bedrooms: form.bedrooms.value,
+        bathrooms:  form.bathrooms.value,
+        levels: form.levels.value,
+        imgUrl: form.imgUrl.value,
+        year: form.year.value,
+        price: parseFloat(form.price.value),
+        description:  form.description.value,
     }
+    console.log(rawHouse)
+    housesServices.createHouse(rawHouse)
 }
+
+deleteHouse(id) {
+    console.log(id)
+    housesServices.deleteHouse(id)
+}
+
 
 }
